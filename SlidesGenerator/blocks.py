@@ -1,8 +1,6 @@
 from .config import *
 import random
 from PIL import ImageFont
-import loremipsum
-from transliterate import translit
 from .textgenerator import text_gen
 
 class BaseBlock():
@@ -55,7 +53,7 @@ class BaseTextBlock():
         output_text = ''
         for w in input_text:
             (len_x, len_y) = d.textsize(output_text + w + ' ', font=font)
-            #print(output_text)
+
             if x0 + len_x < DEFAULT_SLIDE_WiDTH:
                 output_text += (w + ' ')
             else:

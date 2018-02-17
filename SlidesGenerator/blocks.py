@@ -1,6 +1,8 @@
 from .config import *
 import random
 from PIL import ImageFont
+
+from transliterate import translit
 from .textgenerator import text_gen
 
 class BaseBlock():
